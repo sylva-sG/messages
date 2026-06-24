@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Messages</title>
     
-    <!-- PWA Settings for Fullscreen Mobile App Setup -->
-    <link rel="manifest" href="data:application/manifest+json,{%22name%22:%22Messages%22,%22short_name%22:%22Messages%22,%22start_url%22:%22.%22,%22display%22:%22standalone%22,%22background_color%22:%22%23121212%22,%22theme_color%22:%22%231e1e1e%22}">
+    <!-- 🛠️ CRITICAL FIX: Enhanced PWA Configuration for True Offline Native Android Installation -->
+    <link rel="manifest" href="data:application/manifest+json,{%22name%22:%22Messages%22,%22short_name%22:%22Messages%22,%22start_url%22:%22index.html%22,%22display%22:%22standalone%22,%22orientation%22:%22portrait%22,%22background_color%22:%22%23000000%22,%22theme_color%22:%22%23161618%22,%22icons%22:[{%22src%22:%22data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='192' height='192' viewBox='0 0 192 192'><rect width='192' height='192' fill='%230b84ff'/><text x='50%25' y='65%25' font-family='sans-serif' font-size='90' font-weight='bold' fill='white' text-anchor='middle'>💬</text></svg>%22,%22sizes%22:%22192x192%22,%22type%22:%22image/svg+xml%22,%22purpose%22:%22any%22},{%22src%22:%22data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='512' height='512' viewBox='0 0 512 512'><rect width='512' height='512' fill='%230b84ff'/><text x='50%25' y='65%25' font-family='sans-serif' font-size='240' font-weight='bold' fill='white' text-anchor='middle'>💬</text></svg>%22,%22sizes%22:%22512x512%22,%22type%22:%22image/svg+xml%22,%22purpose%22:%22any%22}]}">
+    
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
 
     <style>
         :root {
@@ -198,7 +200,6 @@
             display: none;
         }
 
-        /* Show delete button for non-default chats on hover/interaction */
         .chat-item:hover .delete-chat-btn {
             display: block;
         }
@@ -324,6 +325,7 @@
         .fab:active { transform: scale(0.95); }
     </style>
 </head>
+
 <body>
 
     <div class="app-container">
